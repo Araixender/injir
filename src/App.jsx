@@ -19,6 +19,8 @@ function App() {
             <Route path='/checkout' element={<Checkout />} />
             <Route path='/success' element={<Success />} />
             <Route path='/cancel' element={<Cancel />} />
+            <Route path='/no-page' element={<div>NO page</div>} />
+            <Route path='/manage' element={<div>NO page</div>} />
         </Route>
       </Routes>
     </div>
