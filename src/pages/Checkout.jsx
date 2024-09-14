@@ -29,8 +29,6 @@ export default function Checkout() {
             <form>
                 <button onClick={handleSubmit} role='link'>Submit</button>
             </form>
-            <Link to={`/success?auth=${r}`}>Success</Link>
-            <Link to="/cancel">Cancel</Link>
         </div>
     )
 }
