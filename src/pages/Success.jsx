@@ -15,7 +15,10 @@ export default function Success() {
     const sendEmail = () => {
         emailjs.sendForm('service_czbrfpi', 'template_e7731ca', form.current, {
             publicKey: 'bsCe_od_wQFhQK4sG',
-        }).then(() => { console.log('SUCCESS!'); },
+        }).then(() => { 
+            console.log('SUCCESS!');
+            localStorage.clear()
+         },
                 (error) => {
                     console.log('FAILED...', error);
                 },
