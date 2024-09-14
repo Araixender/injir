@@ -6,8 +6,8 @@ export default function UploadLogo() {
     const navigate = useNavigate()
 
     const myWidget = cloudinary.createUploadWidget({
-        cloudName: 'doj87fdqo',
-        uploadPreset: 'injirpaka'
+        cloudName: `${import.meta.env.VITE_CLOUD_ID}`,
+        uploadPreset: `${import.meta.env.VITE_PRESET_ID}`
     }, (error, result) => {
         if (!error && result && result.event === "success") {
             localStorage.setItem('img-url', result.info.secure_url)

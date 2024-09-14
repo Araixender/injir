@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import { loadStripe } from '@stripe/stripe-js';
 import { Link } from 'react-router-dom';
 
-const stripePromise = loadStripe('pk_test_51PyaLsIPpDX0XJCAWuOttfEvqxxEjLsHC5LYbSKcF5ZNQo2lKlBbQaCBjaNMdNYezVoNaVZCTT5TNESAddxmNDCn00tkyPDQi3');
-
+const stripePromise = loadStripe(`${import.meta.env.VITE_STRIPE_API}`);
 
 export default function Checkout() {
     let r = Array(2 + 1).join((Math.random().toString(36) + '00000000000000000').slice(2, 18)).slice(0, 55)
@@ -14,7 +13,7 @@ export default function Checkout() {
         const stripe = await stripePromise;
         const { error } = await stripe.redirectToCheckout({
             lineItems: [{
-                price: 'price_1Pyeb5IPpDX0XJCAdqzLkuJL',
+                price: `${import.meta.env.VITE_PRICE_ID}`,
                 quantity: 1,
             }],
             mode: 'payment',

@@ -9,12 +9,12 @@ export default function Success() {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const form = useRef()
-    const messageRef = useRef()
-    const emailRef = useRef()
+    const messageRef = useRef();
+    const emailRef = useRef();
     const nameRef = useRef()
     const sendEmail = () => {
-        emailjs.sendForm('service_czbrfpi', 'template_e7731ca', form.current, {
-            publicKey: 'bsCe_od_wQFhQK4sG',
+        emailjs.sendForm(`${import.meta.env.VITE_SERVICE_ID}`, `${import.meta.env.VITE_TEMPLATE_ID}`, form.current, {
+            publicKey: `${import.meta.env.VITE_EMAIL_ID}`,
         }).then(() => { 
             console.log('SUCCESS!');
             localStorage.clear()

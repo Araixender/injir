@@ -19,20 +19,9 @@ function App() {
             <Route path='/checkout' element={<Checkout />} />
             <Route path='/success' element={<Success />} />
             <Route path='/cancel' element={<Cancel />} />
-            <Route path='/no-page' element={<div>NO page</div>} />
-            <Route path='/manage' element={<div>NO page</div>} />
         </Route>
       </Routes>
     </div>
   )
 }
-
-
-// publishable keys : pk_test_51PyaLsIPpDX0XJCAWuOttfEvqxxEjLsHC5LYbSKcF5ZNQo2lKlBbQaCBjaNMdNYezVoNaVZCTT5TNESAddxmNDCn00tkyPDQi3
-
-// secret key: 
-// sk_test_51PyaLsIPpDX0XJCAdHljsGy3NGIU5B9jULqhPUSCUA6Vqx4IJB18sbjGPx2gaSS9mgM7a5Oa0clvnITHAoggDqmZ00NiUsmypL
-
-// mail trap: 08cd952291cdda3eb64a47698f43baeb
-
 export default App
