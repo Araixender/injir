@@ -14,8 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
             <Route index element={<IndexPage />}/>
-            <Route path='/create-qrcode' element={<CreatePage />} />
-            <Route path='/upload-logo' element={<UploadLogo />} />
+            <Route path='/get-qrcode' element={<CreatePage />} />
             <Route path='/checkout' element={<Checkout />} />
             <Route path='/success' element={<Success />} />
             <Route path='/cancel' element={<Cancel />} />
@@ -25,3 +24,7 @@ function App() {
   )
 }
 export default App
+
+// Primary color: #e8e8e8
+// btn color: #0069d9
+// secondary color: #666666

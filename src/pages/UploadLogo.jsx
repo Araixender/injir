@@ -13,6 +13,7 @@ export default function UploadLogo() {
             localStorage.setItem('img-url', result.info.secure_url)
             console.log('Done! Here is the image info: ', result.info);
             setFile(result.info.secure_url)
+            alert("Logo has been uploaded")
         }
     }
     )
@@ -21,9 +22,7 @@ export default function UploadLogo() {
         myWidget.open()
     }
     return (<>
-        <div>Upload Logo</div>
-        <button id="upload_widget" className="" onClick={widget}>Upload files</button>
-        <img src={file} alt="" />
-        <Link to="/checkout">checkout</Link>
+        <button id="upload_widget" className="form-control form-control-lg text-light" style={{background: "#666666"}} onClick={widget}>Upload Logo</button>
+        {/* <img src={file} alt="" /> */}
     </>);
 }

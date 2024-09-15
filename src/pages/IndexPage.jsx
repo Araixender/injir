@@ -1,14 +1,12 @@
-import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import Form from '../components/Form';
+import Banner from '../components/Banner';
 
 export default function IndexPage() {
-  useEffect(() => {
-    console.log(import.meta.env.VITE_API_URL);
-  })
   return (
-    <div>
-        <div className="">I am a index page how are you!</div>
-        <div className=''><Link to="/create-qrcode">make a qr</Link></div>
+    <div style={{backgroundColor: "#e8e8e8"}}>
+      <Banner />
+      <Form />
     </div>
   )
 }
